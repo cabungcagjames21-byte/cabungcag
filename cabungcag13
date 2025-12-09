@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class cabungcag13
+{
+   public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] arrayA = new int[5];
+        int[] arrayB = new int[5];
+
+        System.out.println("Enter 5 integers for Array A:");
+        for (int i = 0; i < arrayA.length; i++) {
+            System.out.print("A[" + i + "]: ");
+            arrayA[i] = scanner.nextInt();
+        }
+
+        System.out.println("Enter 5 integers for Array B:");
+        for (int i = 0; i < arrayB.length; i++) {
+            System.out.print("B[" + i + "]: ");
+            arrayB[i] = scanner.nextInt();
+        }
+
+        int[] mergedArray = new int[arrayA.length + arrayB.length];
+
+        // Copy arrayA
+        for (int i = 0; i < arrayA.length; i++) {
+            mergedArray[i] = arrayA[i];
+        }
+
+        // Copy arrayB
+        for (int i = 0; i < arrayB.length; i++) {
+            mergedArray[arrayA.length + i] = arrayB[i];
+        }
+
+        System.out.println("Merged array:");
+        for (int num : mergedArray) {
+            System.out.print(num + " ");
+        }
+
+        scanner.close();
+    }
+}
