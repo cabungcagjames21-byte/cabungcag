@@ -1,0 +1,17 @@
+public class james8
+{
+    public static void main(String[] args) {
+        int[] arrayA = {1, 2, 3, 4, 5};
+        int[] arrayB = new int[arrayA.length];
+
+        
+        for (int i = 0; i < arrayA.length; i++) {
+            arrayB[i] = arrayA[i];
+        }
+
+        System.out.println("Array B after copying elements from Array A:");
+        for (int num : arrayB) {
+            System.out.print(num + " ");
+        }
+    }
+}
